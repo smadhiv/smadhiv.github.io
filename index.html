@@ -2,7 +2,54 @@
 <html lang="en">
 <head>
 <style>
-html{height:100%;margin:0;padding:0}body{margin:0;font-family:"Inconsolata";height:100%}a{text-decoration:none;color:#FF0F00}a:hover{text-decoration:underline}hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(255,255,255,0.3)}#author-name{font-size:30px;color:#272727;display:inline-block}.navbar{padding:50px 0 50px 0}.navbar-ul{display:inline-block;margin:0;padding:5px 0 5px 0;margin-left:20px}.nav-list{list-style-type:none;margin:0 5px 0 10px}.alignable,.pull-left,.pull-right{display:inline-block}.pull-left{float:left}.pull-right{float:right}.container{max-width:700px;margin:auto}.wrapper{min-height:100%}@media (max-width: 800px){.container{max-width:600px;transition:0.3s ease all}}@media (max-width: 650px){.container{max-width:83%}.navbar-ul{margin-top:5px}}@media (max-width: 580px){#author-name{display:inline-block}}.content a:hover{text-decoration:underline}.content ol{counter-reset:list}.content ol>li{list-style-position:none;position:relative;list-style:none;margin-top:5px;margin-bottom:5px}.content ul>li{margin:5px 0 5px 0}.content ul{padding:0 20px 0 20px}.content ol{padding:0 30px 0 30px}.content ol>li:before{content:"[" counter(list,decimal) "] ";counter-increment:list;position:absolute;left:-30px}.content blockquote{border-left:5px solid #333333;margin:20px 0 20px 0;padding:2px 8px 2px 8px;font-style:italic}.content .profile-picture{height:85px;width:85px;position:relative;margin:-10px 0 0 15px;float:right;border-radius:50%}p .content .profile-picture{padding:0;margin:0}@media (max-width: 480px){.content .profile-picture img{margin-top:-5px}}.content img{text-align:center;width:100%}table{margin:15px 0;border-collapse:collapse;width:100%;padding:0}table tr{border-top:1px solid #cccccc;background-color:white;margin:0;padding:0}table tr:nth-child(2n){background-color:#f8f8f8}table tr th{font-weight:bold;border:1px solid #cccccc;text-align:left;margin:0;padding:6px 13px}table tr td{border:1px solid #cccccc;text-align:left;margin:0;padding:6px 13px}table tr th :first-child,table tr td :first-child{margin:0}table tr th :last-child,table tr td :last-child{margin:0}
+/* vietnamese */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v15/BjAYBlHtW3CJxDcjzrnZCL6up8jxqWt8HVA3mDhkV_0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v15/BjAYBlHtW3CJxDcjzrnZCCYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v15/BjAYBlHtW3CJxDcjzrnZCI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Inconsolata Bold'), local('Inconsolata-Bold'), url(https://fonts.gstatic.com/s/inconsolata/v15/AIed271kqQlcIRSOnQH0yWhQUTDJGru-0vvUpABgH8I.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Inconsolata Bold'), local('Inconsolata-Bold'), url(https://fonts.gstatic.com/s/inconsolata/v15/AIed271kqQlcIRSOnQH0yejkDdvhIIFj_YMdgqpnSB0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Inconsolata Bold'), local('Inconsolata-Bold'), url(https://fonts.gstatic.com/s/inconsolata/v15/AIed271kqQlcIRSOnQH0yYlIZu-HDpmDIZMigmsroc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 </style>
 <title>Sriram Madhivanan</title>
 <meta charset="utf-8">
