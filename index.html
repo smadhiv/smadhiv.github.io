@@ -22,7 +22,7 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#jumbotron">Projects</a>
+          <a class="nav-link" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Resume/SriramMadhivanan.pdf">Resume</a>
@@ -37,7 +37,7 @@
         </li>
 		
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
 	  </div>
@@ -56,41 +56,44 @@
 	</div>
 
     <div class="container">
-		<div class="row text-md-center">
+		<div class="row text-md-center" id="projects">
 			<h2>Projects</h2>
 			<div class="col-md-4">
 				<h4>Scalable accelerated compression</h4>
-				<img src="images/compression.png" alt="compression-project" class="img-fluid">
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				<p><a class="btn btn-secondary" href="#" role="button">View code &raquo;</a></p>
+				<a href="https://github.com/smadhiv/HuffmanCoding_MPI_CUDA" alt="go to project page"><img src="images/compression.png" alt="compression-project" class="img-fluid"></a>
+				<p>Tools: C, CUDA, MPI</p>
+				<p>Huffman coding implementation using CUDA and MPI that achieves scalable speedup for compression and decompression in a proprietary file format. Gained speedup of 13.5 and 15 with MPI and MPI-CUDA implementations respectively.</p>
 			</div>
 			<div class="col-md-4">
 				<h4>Kakuro puzzle solver<br /><br /></h4>
-				<img src="images/kakuro.png" alt="kakuro-project" class="img-fluid">
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				<p><a class="btn btn-secondary" href="#" role="button">View code &raquo;</a></p>
+				<a href="https://github.com/smadhiv/KakuroSolver" alt="got to project page"><img src="images/kakuro.png" alt="kakuro-project" class="img-fluid"></a>
+				<p>Tools: Python</p>
+				<p>A solver for the kakuro puzzle in python using object oriented programming. The design lists all possible solutions. Solution is obtained by reducing the possible combinations based on the intersection information for unique solutions else tries each remaining possible combinations to get non-uniuqe solutions</p>
 			</div>
 			<div class="col-md-4">
 				<h4>2D fighting game<br /><br /></h4>
-				<img src="images/game.png" alt="gamedesign-project" class="img-fluid">
-				<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-				<p><a class="btn btn-secondary" href="#" role="button">View code &raquo;</a></p>
+				<a href="https://github.com/smadhiv/2D-FightingGame" alt="go to project page"><img src="images/game.png" alt="gamedesign-project" class="img-fluid"></a>
+				<p>Tools: C++, SDL 1.2</p>
+				<p>A data driven 2D game of fighter genre with option of two players or player vs AI. Singleton, factory, strategy, flyweight and observer patterns were used to achieve various game features.</p>
 			</div>
+		</div>
+		<div class="jumbotron text-md-center" id="contact">
+			<h2>Contact</h2>
+			<form action="mailto:sriram.madhivanan@gmail.com" method="post" enctype="text/plain">
+				Name<br>
+				<input type="text" name="name"><br>
+				E-mail<br>
+				<input type="text" name="mail"><br>
+				Text<br>
+				<input type="text" name="comment" size="50"><br><br>
+				<input type="submit" value="Send">
+				<input type="reset" value="Reset">
+			</form>
 		</div>
 		<hr />
 		<footer class="text-md-center">
 			<p>SM</p>
 		</footer>
     </div> 
-	<!-- /container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
