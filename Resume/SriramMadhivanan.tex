@@ -1,76 +1,211 @@
-\documentclass[]{SriramMadhivanan}
+%-------------------------
+% Based off of: https://github.com/sb2nov/resume
+%------------------------
 
-% For mathematical symbols
-\usepackage{amsmath}
+\documentclass[letterpaper,11pt]{article}
 
-% Set applicant's personal data for header
-\name{Sriram Madhivanan} 
-\address{806 College Ave Apt 20 \linebreak Clemson SC 29631 \linebreak USA}
-\contacts{ \href{callto:+14798564941}{(479) 856-4941} \linebreak \href{mailto:sriram.madhivanan@gmail.com}{sriram.madhivanan@gmail.com} \linebreak \href{https://www.linkedin.com/in/sriram17}{linkedin.com/in/sriram17} \linebreak
-	\href{https://smadhiv.github.io}{smadhiv.github.io}}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & #2 \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
-	% Print the header
-	\makeheader
 	
-	% Print the content
-	\begin{cvsection}{Summary}
-	 Computer Engineering graduate student with 2.5-years professional experience and interests in systems software development and high performance computing.
+	%----------HEADING----------
+	% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+		%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+		% \end{tabular*}
+	
+	\begin{center}
+		\textbf{\Huge \scshape Sriram Madhivanan} \\ \vspace{1pt}
+		\small 720-254-3220 $|$ \href{mailto:sriram.madhivanan@gmail.com}{\underline{sriram.madhivanan@gmail.com}} $|$ 
+		\href{https://www.linkedin.com/in/sriram17/}{\underline{https://www.linkedin.com/in/sriram17/}} $|$
+		\href{https://github.com/smadhiv}{\underline{https://github.com/smadhiv}}
+	\end{center}
+	
+	
+	%-----------EDUCATION-----------
+	\section{Education}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{Clemson University}{Clemson, SC}
+	{MS in Computer Engineering}{Spring 2015 -- Fall 2017}
+	\resumeSubheading
+	{Anna University}{Chennai, TN}
+	{BE in Electrical and Electronics Engineering}{Fall 2008 -- Spring 2012}
+	\resumeSubHeadingListEnd
+	
+	
+	%-----------EXPERIENCE-----------
+	\section{Experience}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheading
+	{Senior Embedded Software Engineer}{Oct 2017 -- Present}
+	{Qualcomm Inc.}{Boulder, CO}
+	\resumeItemListStart
+	\resumeItem{Designed, developed, and maintained a multi-threaded python application that runs on zynqMP processor. This component is a part of the custom hardware system used to verify Qualcomm ASICs modem feature set. The application runs throughout the lifetime of the system and acts as an interface between the server and various embedded components. Some of the features include managing switches, interfaces, custom hardware components and monitoring health of the devices and report any abnormalities. }
+	\resumeItem{Designed, developed, and maintained petalinux init scripts, and its common logging and alarm interface. }
+	\resumeItem{Consistently acknowledged for quality output, with thorough off-target and on-target testing capabilities for the components I own. }
+	\resumeItem{Contributed ideas to speed-up system bringup by offloading tasks from server to the zynqMP cores as well as presenting JSON data in a more user readable form which were well received by the team as well as customers. }
+	\resumeItem{Contributed in hiring (conducting interviews) as well as mentoring interns and new hires. }
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Associate Consultant}{Jul 2012 -- Dec 2014}
+	{Infotrellis Inc.}{Chennai, TN}
+	\resumeItemListStart
+	\resumeItem{Performed end-to-end Extraction Transformation and Load (ETL) tasks from requirement analysis to system study, design, implementation, and documentation. Used SQL and shell scripts for the projects.}
+	\resumeItemListEnd
 
-	\end{cvsection}
-
-	\begin{cvsection}{Work Experience}
-		\begin{cvsubsection}{Teaching Assistant}{Clemson University}{Fall 2015 -- Present}		
-			\begin{itemize}
-				\item Course: ECE 2080 Electrical Engineering Lab 1
-				\item Objective is to introduce electrical measurement techniques, theory and experimental verification of theorems and concepts of Electrical Engineering.
-			\end{itemize}
-		\end{cvsubsection}
-		
-		
-		\begin{cvsubsection}{Associate Consultant}{Infotrellis Inc.}{Jul 2012 -- Dec 2014}		
-			\begin{itemize}
-				\item Performed end-to-end Extraction Transformation and Load (ETL) tasks from requirement analysis to system study, design, implementation, and documentation. Used SQL and shell scripts for the projects.
-				\item Provided a report on search engine optimization possibilities for the company website.
-				\item Created training material for various tools to get new hires on board.				
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
+	\resumeSubheading
+	{Intern}{Jun 2011 -- Aug 2011}
+	{Infotrellis Inc.}{Chennai, TN}
+	\resumeItemListStart
+	\resumeItem{Provided a report on search engine optimization possibilities for the company website.}
+	\resumeItemListEnd
 	
-	\begin{cvsection}{Education}
-		\begin{cvsubsection}{Clemson, SC}{Clemson University}{Spring 2015 -- Present}
-			\begin{itemize}
-				\item M.S. in Computer Engineering, GPA: 3.64
-				\item Graduate Coursework: Data-Driven 2D Game Development, Advanced Data Structures, Operating Systems, FPGA design and Applications, Artificial Neural Networks, High Performance Computing with GPUs, Embedded Computing, Computer Communications, Network Security, MPI Programming in C.
-			\end{itemize}
-		\end{cvsubsection}
-		
-		\begin{cvsubsection}{Chennai, India}{Anna University}{Fall 2008 -- Spring 2012}
-			\begin{itemize}
-				\item B.E. in Electrical and Electronics Engineering, GPA: 8/10
-				\item Undergraduate Coursework: Digital Signal Processing, Digital Logic Circuits, Data Structures and Algorithm, Numerical Methods.
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
+	\resumeSubHeadingListEnd
 	
-	\begin{cvsection}{Technical Experience}
-		\begin{cvsubsection}{Projects}{}{}
-			\begin{itemize}
-				\item \textbf{Acceleration of Huffman Coding using MPI and CUDA} (C, MPI, CUDA). Implemented Huffman coding using CUDA and MPI to achieve scalable speedup for compression and decompression in a proprietary file format. Obtained maximum speedup of 13.5 and 15 with MPI and MPI-CUDA implementations respectively.
-				\item \textbf{Sound Device Driver} (C, Assembly). Designed a Linux kernel device driver for the sound blaster 16 card. Tested by playing a raw sound file.
-				\item \textbf{Graphics Device Driver} (C).  Implemented a device driver for PCI graphics card in Linux 4.3.3 to draw triangles using FIFO as well as DMA facility.
-				\item \textbf{Data Driven 2D Game} (C++, SDL1.2).  Created a data driven 2D game of fighter genre with option of pvp or pvAI. Used Singleton, factory, strategy, flyweight and observer patterns.
-				\item \textbf{Kakuro Solver} (Python). Implemented a solver for the kakuro puzzle in python using object oriented programming.The design lists all possible solutions. Solution is obtained by reducing the possible combinations based on the intersection information.
-				\item \textbf{Acceleration of Kalman Filtering using OpenCL for FPGAs} (C, OpenCL). Developed a hardware solution to accelerate a 2D Kalman filter using OpenCL. Certain portions were successfully accelerated, but the overall design was slower than the CPU implementation. 
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
 	
-	\begin{cvsection}{Languages and Technologies}
-		\begin{cvsubsection}{}{}{}	
-			\begin{itemize}
-				\item C++, C, python, CUDA, MPI, OpenCL, eclipse, visual studio, git.
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
+	%-----------PROJECTS-----------
+	\section{Projects}
+	\resumeSubHeadingListStart
+	\resumeProjectHeading
+	{\textbf{Acceleration of Huffman Coding using MPI and CUDA} $|$ \emph{C, MPI, CUDA}}{}
+	\resumeItemListStart
+	\resumeItem{Implemented Huffman coding using
+CUDA and MPI to achieve scalable speedup for compression and decompression in a proprietary file format.}
+	\resumeItem{Obtained maximum speedup of 13.5 and 15 with MPI and MPI-CUDA implementations respectively.}
+	\resumeItemListEnd
+	\resumeProjectHeading
+	{\textbf{Kakuro solver} $|$ \emph{Python}}{}
+	\resumeItemListStart
+	\resumeItem{Implemented a solver for the kakuro puzzle in python using object oriented programming.}
+	\resumeItem{The design lists all possible solutions. Solution is obtained by reducing the possible combinations based on the intersection information.}
+	\resumeItemListEnd
+	\resumeProjectHeading
+	{\textbf{Data Driven 2D Game} $|$ \emph{C++, SDL1.2}}{}
+	\resumeItemListStart
+	\resumeItem{Created a data driven 2D game of fighter genre with option of pvp or pvc.}
+	\resumeItem{Used singleton, factory, strategy, flyweight and observer patterns.}
+	\resumeItemListEnd
+	\resumeProjectHeading
+	{\textbf{Acceleration of Kalman Filtering using OpenCL for FPGAs} $|$ \emph{C, OpenCL}}{}
+	\resumeItemListStart
+	\resumeItem{Developed a hardware solution to accelerate a 2D Kalman filter using OpenCL.}
+	\resumeItem{Certain portions were successfully accelerated, but the overall design was slower than the CPU implementation.}
+	\resumeItemListEnd
+	\resumeProjectHeading
+	{\textbf{Sound Device Driver} $|$ \emph{C, Assembly}}{}
+	\resumeItemListStart
+	\resumeItem{Designed a Linux kernel device driver for the sound blaster 16 card.}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	
+	
+	%
+	%-----------PROGRAMMING SKILLS-----------
+	\section{Technical Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\small{\item{
+				\textbf{Languages}{: Python, C/C++, MPI, CUDA, SQL, git} \\
+		}}
+	\end{itemize}
+	
+	
+	%-------------------------------------------
 \end{document}
